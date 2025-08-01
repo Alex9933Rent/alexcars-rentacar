@@ -4,9 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Алекс Карс БГ - Автомобили под наем</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #1a1a1a;
+    }
+    .fleet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .car {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      width: 280px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .car img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    form {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+    input, button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Алекс Карс БГ!</h1>
-  <p>This is a demo deployment of the car rental website.</p>
+
+  <h1>Алекс Карс БГ - Автомобили под наем</h1>
+  <p>Добре дошли! Изберете автомобил и направете своята резервация лесно и бързо.</p>
+
+  <h2>Автопарк</h2>
+  <div class="fleet">
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_1280.jpg" alt="Hyundai i20">
+      <h3>Hyundai i20</h3>
+      <p>Икономичен клас — 30€/ден</p>
+    </div>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/05/14/auto-1868726_1280.jpg" alt="Skoda Octavia">
+      <h3>Skoda Octavia</h3>
+      <p>Стандартен клас — 45€/ден</p>
+    </div>
+    <div class="car">
+      <img src="https://cdn.pixabay.com/photo/2020/06/23/07/28/car-5331786_1280.jpg" alt="Toyota RAV4">
+      <h3>Toyota RAV4</h3>
+      <p>Голям SUV — 65€/ден</p>
+    </div>
+  </div>
+
+  <form onsubmit="alert('Вашето запитване е изпратено успешно!'); return false;">
+    <h2>Резервационна форма</h2>
+    <input type="text" name="name" placeholder="Вашето име" required />
+    <input type="email" name="email" placeholder="Имейл за контакт" required />
+    <input type="text" name="car" placeholder="Изберете автомобил (напр. Hyundai i20)" required />
+    <input type="date" name="startDate" required />
+    <input type="date" name="endDate" required />
+    <button type="submit">Изпрати запитване</button>
+  </form>
+
 </body>
 </html>
